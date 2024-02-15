@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Course Connect | Jesús Nieves</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/course-content.css">
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body id="body">
+
+    	<!--------------------------------->
+    	<!-- Estructura del menú lateral -->
+    	<!--------------------------------->
+
+        <header>
+           	<div class="menu__side" id="menu_side">
+	            <div class="options__menu"> 
+
+	                <a class="default">
+	                    <div class="option profile">
+	                        <img src="assets/img/profile_hombre.png" alt="">
+	                        <h4>Jesús Nieves</h4>
+	                    </div>
+	                </a>
+	                    
+	                <a class="px15">
+	                    <div class="option">
+	                        <i class="fa-solid fa-house"></i>
+	                        <h4>Inicio</h4>
+	                    </div>
+	                </a>
+        
+	                <a class="px15" data-boton="profile">
+	                    <div class="option" id="profile_menu">
+	                        <i class="fa-solid fa-user"></i>
+	                        <h4>Perfil</h4>
+	                    </div>
+	                </a>
+
+	                <a class="px15" data-boton="saved-courses">
+	                    <div class="option" id="saved-courses_menu">
+	                        <i class="fa-solid fa-graduation-cap"></i>
+	                        <h4>Cursos Guardados</h4>
+	                    </div>
+	                </a>
+
+	                <a class="px15" data-boton="stats">
+	                    <div class="option" id="stats_menu">
+	                        <i class="fa-solid fa-chart-column"></i>
+	                        <h4>Estadisticas</h4>
+	                    </div>
+	                </a>
+
+	                <a class="logout px15" id="logout" href="logout.php">
+	                    <div class="option">
+	                        <i class="fa-solid fa-right-from-bracket"></i>
+	                        <h4>Cerrar Sesion</h4>
+	                    </div>
+	                </a>
+	            </div>
+	        </div>  
+        </header>
+
+
+        <!--------------------------------->
+        <!-------Saludo al usuario--------->
+        <!--------------------------------->
+        <section class="welcome">
+            <div class="text">
+                <h1>Hola Jesús Nieves!</h1>
+                <h3>Es un placer verte de nuevo</h3>
+            </div>
+            <img src="assets/img/notion.png" alt="">
+        </section>
+
+
+        <!--------------------------------->
+        <!-------Tarjetas de Cursos-------->
+        <!--------------------------------->
+        <section class="cards" id="cards">
+        	
+        	<div class="card" 
+        	data-code="01"
+        	data-cardname="Maquetación Web"
+        	data-courseimg="assets/img/programmer.png"
+        	data-course_img="assets/img/desarrollo_web_wallpaper.jpg"
+        	data-course_description="<li>Introducción a HTML</li>
+									<li>Enlaces HTML</li>
+									<li>Estructura de contenido/Layout HTML</li>
+									<li>Introducción a CSS</li>
+									<li>Selectores CSS</li>
+									<li>Media Queries CSS</li>"
+        	>
+        		<a href="#">
+        			<img src="assets/img/programmer.png" alt="">
+		        	<h2>Maquetación Web</h2>
+		        	<h4>Dificultad: Baja</h4> <br>
+        		</a>
+        	</div>
+
+        	<div class="card" 
+        	data-code="02"
+        	data-cardname="Ingles A1"
+        	data-courseImg="assets/img/ingles1.png"
+        	data-course_img="assets/img/ingles_wallpaper.jpg"
+        	data-course_description="<li>Introduccion al Idioma</li>
+        							<li>El presente Continuo</li>
+									<li>Pronombres Posesivos y Objetivos</li>
+									<li>Pasado simple</li>
+									<li>Preposiciones In, On, At</li>
+									<li>“Going  to”</li>"
+			>
+        		<a href="#">
+        			<img src="assets/img/ingles1.png" alt="">
+		        	<h2>Ingles A1</h2>
+		        	<h4>Dificultad: Baja</h4>
+        		</a>
+        	</div>
+
+        	<div class="card" 
+        	data-code="03"
+        	data-cardname="Integrales"
+        	data-courseImg="assets/img/matematicas1-1.png"
+        	data-course_img="assets/img/integrales_wallpaper.jpg"
+        	data-course_description="<li>Introducción a las Integrales</li>
+									<li>Integral Indefinida </li>
+									<li>Integral de una Raíz </li>
+									<li>Integral de un Polinomio </li>
+									<li>Introducción a las Integrales por Sustitución</li>
+									<li>Integración por Sustitución </li>"
+        	>
+        		<a href="#">
+        			<img src="assets/img/matematicas1-1.png" alt="">
+		        	<h2>Factorización</h2>
+		        	<h4>Dificultad: Media</h4>
+        		</a>
+        	</div>
+
+        	<div class="card"
+        	data-code="04"
+        	data-cardname="Reposteria"
+        	data-courseImg="assets/img/reposteria1.png"
+        	data-course_img="assets/img/desarrollo_web_wallpaper.jpg"
+        	data-course_description="<li>Introduccion al Desarrollo web</li>
+									<li>HTML Basico</li>
+									<li>Css Basico</li>
+									<li>Principios Javascript</li>
+									<li>Servidor Local</li>
+									<li>Hosting</li>"
+        	>
+        		<a href="#">
+        			<img src="assets/img/reposteria1.png" alt="">
+		        	<h2>Resposteria</h2>
+		        	<h4>Dificultad: Baja</h4>
+        		</a>
+        	</div>
+
+        	<div class="card"
+        	data-code="05"
+        	data-cardname="Ofimatica 1/3"
+        	data-courseImg="assets/img/ofimatica.png"
+        	data-course_img="assets/img/word_wallpaper.jpg"
+        	data-course_description="<li>Introducción a Word</li>
+									<li>Viñetas, sangrías y tabulación de Datos</li>
+									<li>Insertar imágenes</li>
+									<li>Tablas y estilos de Tablas</li>
+									<li>Enumerar Paginas “Pie de Página”</li>
+									<li>Separar Correspondencia</li>"
+        	>
+        		<a href="#">
+        			<img src="assets/img/ofimatica.png" alt="">
+		        	<h2>Ofimatica 1/3</h2>
+		        	<h4>Dificultad: Baja</h4>
+        		</a>
+        	</div>
+        </section>
+
+        <!--------------------------------->
+        <!---------Panel Lateral----------->
+        <!--------------------------------->
+        <section class="panel_lateral_all">
+        	
+        	<!---------Panel Perfil----------->
+        	<div class="container-panel" id="container-panel-profile">
+	        	<div class="cont-panel">
+	        		<a id="exit-panel-profile" class="exit-panel">X</a>
+		        	<div class="content-panel-profile">
+		        		<div class="img-panel">
+		        			<img src="assets/img/profile.png" alt="">
+		        		</div>
+		        		<h3>Nombre: Jesús Alberto</h3>
+		        		<h3>Apellido: Nieves Montes</h3>
+		        		<h3>Cedula: 30194122</h3>
+		        		<h3>jesusnieves303@gmail.con</h3>
+		        	</div>
+		        	<div class="editar">
+		        		<button>Editar</button>
+		        	</div>
+	        	</div>
+	        </div>
+
+
+	        <!---------Panel Cursos Guardados----------->
+	        <div class="container-panel" id="container-panel-saved-courses">
+	        	<div class="cont-panel" id="cont_panel_saved_courses">
+	        		<a id="exit-panel-saved-courses" class="exit-panel">X</a>
+		        	<h1>Cursos Guardados</h1>
+		        	
+					<a href="main.php">
+						<div class="content-courses" data-content_course="${courseName}" id="content_courses_id">
+							<img src="${courseImgOverlay}" alt="">	
+							<div class="content-courses-text">
+								<h1>${courseName}</h1>
+								<h3>Contenido:</h3>
+								${courseDescription}
+								<form action="../login/agg.php" method="POST">
+									<input class="hidden" type="number" name="code" value="${code}" />
+						        	<input class="empezar_curso"type="submit" value="Empezar Curso">
+						        </form>
+							</div>
+						</div>
+					</a> 
+
+		        	
+
+	        	</div>
+	        </div>
+
+
+	        <!---------Panel Estadistica----------->
+	        <div class="container-panel" id="container-panel-stats">
+	        	<div class="cont-panel">
+	        		<a id="exit-panel-stats" class="exit-panel">X</a>
+		        	<h1>Estadisticas</h1>
+
+		        	<!-- 
+		        	<div data-course_name="Desarrollo Web" class="courses-saved-cards">
+		        		<img src="assets/img/programmer1.png" alt="">
+		        		<h3>Desarrollo Web</h3>
+		        		<div class="stats-date">
+		        			<p>15-01-2024. <br> 27-01-2024.</p>
+		        		</div>
+		        	</div> 
+		        	-->
+
+	        	</div>
+	        </div>
+        </section>zz
+
+        <section class="card_overlay" id="card_overlay">
+			<div class="card_show" id="card_show">
+				<span class="close_info" id="close_info">
+					<a>X</a>
+				</span>
+
+				<!-- 
+				<div class="content-courses" data-content_course="Desarrollo Web">
+					<img src="assets/img/desarrollo_web_wallpaper.jpg" alt="">	
+					<div class="content-courses-text">
+						<h1>Desarrollo Web</h1>
+						<h3>Contenido:</h3>
+						<li>Introduccion al Desarrollo web</li>
+						<li>HTML Basico</li>
+						<li>Css Basico</li>
+						<li>Principios Javascript</li>
+						<li>Servidor Local</li>
+						<li>Hosting</li>
+						<button class="espezar-curso" id="empezar-curso">Empezar Curso</button>
+					</div>
+				</div> 
+				 -->
+				
+			</div>
+		</section>
+
+
+
+    </body>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/course-content.js"></script>
+</html>

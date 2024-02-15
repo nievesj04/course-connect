@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin-left: 80px;
+    transition: margin-left .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-color: #f7f7f7f7;
+}
+
+header{
+    position: relative;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    top: 0;
+}
+
+.menu__side{
+    width: 75px;
+    height: 100%;
+    background: #0d0d0d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #f3f3f3;
+    font-size: 18px;
+    z-index: 2;
+    overflow: hidden;
+    border-right: 20px solid #0d0d0d;
+    transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    border-radius: 0 20px 20px 0;
+    box-shadow: 10px 7px 15px rgba(0, 0, 0, .3);
+}
+
+
+/*------ Panel Side ----------*/
+
+/*Ocultar Scroll*/
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.options__menu{
+    padding: 20px 10px;
+    position: absolute;
+    top: 0px;
+}
+
+.options__menu a{
+    color: #aaa;
+    display: block;
+    position: relative;
+    transition: color .2s;
+}
+
+.options__menu a:hover{
+    color: #0d0d0d;
+    background: #f7f7f7;
+    transition: all .8s ease;
+    border-radius: 45px 45px 45px 45px;
+}
+
+.options__menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options__menu .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.options__menu .option h4{
+    font-weight: 300;
+}
+
+.logout{
+    top: 33vh;
+}
+
+.profile h4{
+    padding: 0 10px;
+}
+
+.profile img{
+    height: 45px;
+    width: 45px;
+}
+
+.px15{
+    padding: 0  0 0 15px;
+    cursor: pointer;
+}
+
+.default{
+    cursor: default;
+}
+
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    z-index: 300;
+    margin-left: 230px;
+}
+
+.menu__side_move{
+    z-index: 300;
+    width: 230px;
+}
+
+
+
+/*---- Welcome -----*/
+
+.welcome{
+	height: 270px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background: #f9f9f9f9;
+    border-radius: 15px 15px 15px 15px;
+    margin: 60px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .2);
+}
+
+.welcome img{
+    width: 250px;
+}
+
+.text{
+	padding: 3.7rem 20px 0 0;
+    text-align: center;
+}
+
+.text h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.text h3{
+    font-size: 1.1rem;
+}
+
+/*------- Cards ------*/
+
+.cards{
+    display: grid;
+    grid-template-columns: 
+        repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+            );
+    grid-gap: 32px; 
+    margin: 60px;
+}
+
+.cards > .card {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #f9f9f9f9;
+    border-radius: 20px 20px 20px 20px;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .2);
+
+}
+
+.card img{
+    height: auto;
+    width: 15rem;
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.card img:hover{
+    transform: scale(1.15); 
+    filter: grayscale(0);
+    transition: .3s;
+}
+
+.card h2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+.card h4{
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+
+.container-panel{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.container-panel.active{
+    display: block;
+}
+
+.cont-panel{
+    width: 100%;
+    max-width: 310px;
+    background-color: #0d0d0d;
+    height: 100vh;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 77%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+}
+
+.cont-panel .exit-panel{
+    position: absolute;
+    color: #9d9d9d;
+    font-size: 20px;
+    padding: 3px 13px;
+    transition: all .5s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cont-panel .exit-panel:hover{
+    color: #f7f7f7;
+    background: #d32f2f;
+    border-radius: 0 0 10px 0;
+    transition: all .3s ease;  
+}
+
+.img-panel{
+    text-align: center;
+}
+
+.img-panel img{
+    margin: 2rem 0 0 0;
+    height: auto;
+    width: 70%;
+}
+
+.content-panel-profile h3{
+    color: #f7f7f7;
+    font-size: 18px;
+    margin: 20px;
+    background: #151515;
+    padding: 10px 5px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.cont-panel .editar{
+    text-align: center;
+}
+
+.container-panel{
+    color: #f7f7f7;
+}
+
+
+.cont-panel button{
+    height: 48px;
+    width: 140px;
+    background: #151515;
+    margin: 10px 20px;
+    border-radius: 15px 15px 15px 15px;
+    border: none;
+    font-size: 17px;
+    color: #f7f7f7;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.cont-panel button:hover{
+    background: #f7f7f7;
+    color: #151515;
+    transition: all .5s ease;
+    border-radius: 35px 35px 35px 35px;
+}
+
+.cont-panel button a{
+    text-decoration: none;
+}
+
+.container-panel h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 35px 0 1rem 0;  
+}
+
+
+
+.courses-saved-cards{
+    display: flex;
+    margin: 1rem 1rem;
+    background: #151515;
+    border-radius: 15px 15px 15px 15px;
+    justify-content: space-between;
+    align-items: center; 
+    cursor: pointer;
+}
+
+.courses-saved-cards .course-remove{
+    color: #9d9d9d;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: all .5s ease;
+    font-weight: 600;
+    cursor: pointer;   
+}
+
+.courses-saved-cards .course-remove:hover{
+    color: #f7f7f7;
+    background: #d32f2f;
+    border-radius: 10px 10px 10px 10px;
+    transition: all .3s ease;  
+}
+
+.courses-saved-cards img{
+    background: #f7f7f7;
+    height: auto;
+    width: 30%;
+    border-radius: 15px 15px 15px 15px; 
+}
+
+.courses-saved-cards h3{
+    padding: 10px;
+    text-align: center;
+    color: #f7f7f7;
+}
+
+
